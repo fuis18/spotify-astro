@@ -6,26 +6,11 @@ export function PlayerControlButtonBar() {
 	const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore(
 		(state) => state,
 	);
-	const audioRef = useRef(null);
 
 	const onPlayPause = () => {
 		if (currentMusic.song === null) return;
 		setIsPlaying(!isPlaying);
 	};
-
-	useEffect(() => {
-		if (!audioRef.current) return;
-		isPlaying ? audioRef.current.play() : audioRef.current.pause();
-	}, [isPlaying]);
-
-	useEffect(() => {
-		const { song, playlist, songs } = currentMusic;
-		if (song) {
-			const src = `/music/${playlist?.id}/0${song.id}.mp3`;
-			audioRef.current = new Audio(src);
-			audioRef.current.play();
-		}
-	}, [currentMusic]);
 
 	return (
 		<div className="flex justify-center flex-row flex-nowrap items-center gap-4">

@@ -1,10 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import tailwindcss from '@tailwindcss/vite';
-
 import svelte from '@astrojs/svelte';
-
 import react from '@astrojs/react';
 
 // https://astro.build/config
@@ -13,6 +10,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  output: 'static',
+  output: 'server',
   integrations: [svelte(), react()]
 });
