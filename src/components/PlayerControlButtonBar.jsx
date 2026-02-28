@@ -1,27 +1,31 @@
 import { Next, Pause, Play, Prev } from "@/icons/PlayerIcons";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
+import { usePlayerStore } from "@/store/playerStore";
 
 export function PlayerControlButtonBar() {
-	const [isPlaying, setIsPlaying] = useState(false);
+	const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore(
+		(state) => state,
+	);
 	const audioRef = useRef(null);
 
 	const onPlayPause = () => {
-		if (!audioRef.current) {
-			audioRef.current = new Audio();
-		}
-
-		if (isPlaying) {
-			audioRef.current.pause();
-		} else {
-			audioRef.current.play();
-			audioRef.current.volume = 0.1;
-		}
+		if (currentMusic.song === null) return;
 		setIsPlaying(!isPlaying);
 	};
 
 	useEffect(() => {
-		audioRef.current.src = `/music/1/01.mp3`;
-	}, []);
+		if (!audioRef.current) return;
+		isPlaying ? audioRef.current.play() : audioRef.current.pause();
+	}, [isPlaying]);
+
+	useEffect(() => {
+		const { song, playlist, songs } = currentMusic;
+		if (song) {
+			const src = `/music/${playlist?.id}/0${song.id}.mp3`;
+			audioRef.current = new Audio(src);
+			audioRef.current.play();
+		}
+	}, [currentMusic]);
 
 	return (
 		<div className="flex justify-center flex-row flex-nowrap items-center gap-4">

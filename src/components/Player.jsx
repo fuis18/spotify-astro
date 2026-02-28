@@ -4,8 +4,6 @@ import { PlayerSoundControl } from "@/components/PlayerSoundControl";
 import { PlayerVolumeControl } from "@/components/PlayerVolumeControl";
 
 export function Player() {
-	// const [currentSong, setCurrentSong] = useState(null);
-
 	return (
 		<div className="flex flex-row justify-between w-full px-4 z-50">
 			<div className="w-50">

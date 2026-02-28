@@ -20,6 +20,7 @@
 		"react-dom": "19.2.4",
 		"svelte": "5.51.5",
 		"tailwindcss": "4.2.0",
-		"typescript": "5.9.3"
+		"typescript": "5.9.3",
+		"zustand": "^5.0.11"
 	}
 }
