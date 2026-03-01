@@ -1,6 +1,7 @@
 ---
 import type { Playlist } from "@/lib/data";
 import CardPlayButton from "./CardPlayButton";
+import { Image } from "astro:assets";
 
 interface Props {
 	playlist: Playlist;
@@ -25,8 +26,11 @@ const artistsString = artists?.join(", ");
 		transition:name=`playlist ${id} box`
 	>
 		<picture class="aspect-square w-full h-auto rounded-md flex-none">
-			<img
+			<Image
 				src={cover}
+				width={176}
+				height={176}
+				loading="eager"
 				alt={`Cover of ${title} by ${artistsString}`}
 				class="object-cover w-full h-full rounded-md"
 				transition:name=`playlist ${id} image`
