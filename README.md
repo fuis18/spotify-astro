@@ -23,8 +23,6 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── music
 │   └── fonts
 ├── src
-│   ├───api
-│   │       get-info-playlist.json.js
 │   ├───assets
 │   │       astro.svg
 │   │       background.svg
@@ -64,6 +62,8 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │
 │   ├───pages
 │   │   │   index.astro
+│   │   ├───api
+│   │   │       get-info-playlist.json.js
 │   │   │
 │   │   └───playlist
 │   │           [id].astro
