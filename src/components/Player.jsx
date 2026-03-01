@@ -1,6 +1,6 @@
 import { PlayerControlButtonBar } from "@/components/PlayerControlButtonBar";
 import { PlayerCurrentSong } from "@/components/PlayerCurrentSong";
-// import { PlayerSoundControl } from "@/components/PlayerSoundControl";
+import { PlayerSoundControl } from "@/components/PlayerSoundControl";
 import { PlayerVolumeControl } from "@/components/PlayerVolumeControl";
 import { useEffect, useRef } from "react";
 import { usePlayerStore } from "@/store/playerStore";
@@ -23,6 +23,12 @@ export function Player() {
 	}, [isPlaying]);
 
 	useEffect(() => {
+		if (audioRef.current) {
+			audioRef.current.volume = volume;
+		}
+	}, [volume]);
+
+	useEffect(() => {
 		const { song, playlist } = currentMusic;
 		if (song) {
 			if (audioRef.current) {
@@ -43,9 +49,9 @@ export function Player() {
 			</div>
 
 			<div className="grid place-content-center gap-4 flex-1">
-				<div className="flex justify-center">
+				<div className="flex justify-center flex-col items-center">
 					<PlayerControlButtonBar />
-					{/* <PlayerSoundControl audio={audioRef} /> */}
+					<PlayerSoundControl audio={audioRef} />
 				</div>
 			</div>
 

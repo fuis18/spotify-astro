@@ -21,6 +21,6 @@ const getVolumeIconByLouder = (loud: number) => {
 	);
 };
 
-export const PlayerVolumeIconComponent = () => {
-	return getVolumeIconByLouder(1);
+export const PlayerVolumeIconComponent = ({ loud }: { loud: number }) => {
+	return getVolumeIconByLouder(loud);
 };

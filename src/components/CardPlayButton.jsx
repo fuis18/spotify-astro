@@ -17,7 +17,6 @@ const CardPlayButton = ({ id, size = "small" }) => {
 			.then((res) => res.json())
 			.then((data) => {
 				const { songs, playlist } = data;
-				console.log(data);
 				setCurrentMusic({ songs: songs, playlist: playlist, song: songs[0] });
 			})
 			.then(() => {
