@@ -1,15 +1,30 @@
 import { Next, Pause, Play, Prev } from "@/icons/PlayerIcons";
-import { useRef, useEffect } from "react";
 import { usePlayerStore } from "@/store/playerStore";
+import { useCurrentMusic } from "@/hooks/UseCurrentMusic";
 
 export function PlayerControlButtonBar() {
 	const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore(
 		(state) => state,
 	);
+	const { getNextSong, getPreviousSong } = useCurrentMusic(currentMusic);
 
 	const onPlayPause = () => {
 		if (currentMusic.song === null) return;
 		setIsPlaying(!isPlaying);
+	};
+
+	const onNextSong = () => {
+		const nextSong = getNextSong();
+		if (nextSong) {
+			setCurrentMusic({ ...currentMusic, song: nextSong });
+		}
+	};
+
+	const onPrevSong = () => {
+		const prevSong = getPreviousSong();
+		if (prevSong) {
+			setCurrentMusic({ ...currentMusic, song: prevSong });
+		}
 	};
 
 	return (
