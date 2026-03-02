@@ -3,9 +3,8 @@ import { usePlayerStore } from "@/store/playerStore";
 import { useCurrentMusic } from "@/hooks/UseCurrentMusic";
 
 export function PlayerControlButtonBar() {
-	const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore(
-		(state) => state,
-	);
+	const { isPlaying, setIsPlaying, currentMusic, setCurrentMusic } =
+		usePlayerStore((state) => state);
 	const { getNextSong, getPreviousSong } = useCurrentMusic(currentMusic);
 
 	const onPlayPause = () => {
