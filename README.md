@@ -1,15 +1,30 @@
-# spotify-astro
+# 🎵 Spotify Astro Clone
 
-```sh
-bunx create astro@latest
-bunx astro add tailwind
-bunx astro add react
-bunx astro add svelte
-bun install zustand 
-bun add radix-ui
-bun add clsx tailwind-merge
-bunx astro add @astrojs/vercel
-```
+Un clon funcional de Spotify construido con **Astro**, que replica la interfaz y experiencia de usuario de la popular plataforma de música en streaming.
+
+🔗 **Demo en vivo:** [f18-spotify-astro.vercel.app](https://f18-spotify-astro.vercel.app/)
+
+## ✨ Características
+
+- 🎧 Reproductor de música con controles completos (play, pause, volumen, progreso)
+- 📂 Navegación por playlists con rutas dinámicas
+- 🎨 UI fiel al diseño de Spotify con tema oscuro
+- ⚡ Transiciones de vista suaves con el `ClientRouter` de Astro
+- 📱 Layout responsive con grid CSS
+- 🔤 Tipografía oficial `CircularStd`
+
+## 🛠️ Stack tecnológico
+
+| Tecnología                               | Uso                                |
+| ---------------------------------------- | ---------------------------------- |
+| [Astro](https://astro.build/)            | Framework principal + SSR          |
+| [React](https://react.dev/)              | Componentes interactivos (Player)  |
+| [Svelte](https://svelte.dev/)            | Componentes reactivos ligeros      |
+| [Tailwind CSS](https://tailwindcss.com/) | Estilos utilitarios                |
+| [Zustand](https://zustand-demo.pmnd.rs/) | Estado global del reproductor      |
+| [Radix UI](https://www.radix-ui.com/)    | Componentes UI accesibles (Slider) |
+| [Vercel](https://vercel.com/)            | Deploy y hosting                   |
+| [Bun](https://bun.sh/)                   | Package manager y runtime          |
 
 ## 🚀 Project Structure
 
@@ -82,13 +97,18 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+```sh
+bunx create astro@latest
+bunx astro add tailwind
+bunx astro add react
+bunx astro add svelte
+bun install zustand 
+bun add radix-ui
+bun add clsx tailwind-merge
+bunx astro add @astrojs/vercel
+```
 
-| Command               | Action                                           |
-| :-------------------- | :----------------------------------------------- |
-| `bun install`         | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+```sh
+bun dev
+bun preview
+```
