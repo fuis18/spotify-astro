@@ -29,7 +29,11 @@ export function PlayerControlButtonBar() {
 
 	return (
 		<div className="flex justify-center flex-row flex-nowrap items-center gap-4">
-			<button className="hover:scale-110" title="Previous song">
+			<button
+				className="hover:scale-110"
+				onClick={onPrevSong}
+				title="Previous song"
+			>
 				<Prev />
 			</button>
 			<button
@@ -38,7 +42,11 @@ export function PlayerControlButtonBar() {
 			>
 				{isPlaying ? <Pause /> : <Play />}
 			</button>
-			<button className="hover:scale-110" title="Next song">
+			<button
+				className="hover:scale-110"
+				onClick={onNextSong}
+				title="Next song"
+			>
 				<Next />
 			</button>
 		</div>
