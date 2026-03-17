@@ -3,6 +3,7 @@
 Un clon funcional de Spotify construido con **Astro**, que replica la interfaz y experiencia de usuario de la popular plataforma de música en streaming.
 
 <img src="./assets/img-1.png" alt="img-1">
+<img src="./assets/img-2.png" alt="img-2">
 
 ## ✨ Características
 
