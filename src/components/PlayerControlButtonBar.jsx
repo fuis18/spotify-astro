@@ -32,12 +32,14 @@ export function PlayerControlButtonBar() {
 				className="hover:scale-110"
 				onClick={onPrevSong}
 				title="Previous song"
+				aria-label="Previus song"
 			>
 				<Prev />
 			</button>
 			<button
 				className="bg-white text-black rounded-full p-2 hover:scale-110"
 				onClick={onPlayPause}
+				aria-label={isPlayingPlaylist ? "Pausar" : "Reproducir"}
 			>
 				{isPlaying ? <Pause /> : <Play />}
 			</button>
@@ -45,6 +47,7 @@ export function PlayerControlButtonBar() {
 				className="hover:scale-110"
 				onClick={onNextSong}
 				title="Next song"
+				aria-label="Next song"
 			>
 				<Next />
 			</button>
