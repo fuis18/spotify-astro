@@ -39,7 +39,7 @@ export function PlayerControlButtonBar() {
 			<button
 				className="bg-white text-black rounded-full p-2 hover:scale-110"
 				onClick={onPlayPause}
-				aria-label={isPlayingPlaylist ? "Pausar" : "Reproducir"}
+				aria-label={isPlaying ? "Pausar" : "Reproducir"}
 			>
 				{isPlaying ? <Pause /> : <Play />}
 			</button>
