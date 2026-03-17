@@ -2,7 +2,7 @@
 
 Un clon funcional de Spotify construido con **Astro**, que replica la interfaz y experiencia de usuario de la popular plataforma de música en streaming.
 
-🔗 **Demo en vivo:** [f18-spotify-astro.vercel.app](https://f18-spotify-astro.vercel.app/)
+<img src="./assets/img-1.png" alt="img-1">
 
 ## ✨ Características
 
