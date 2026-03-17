@@ -30,6 +30,7 @@ const CardPlayButton = ({ id, size = "small" }) => {
 		<button
 			onClick={handleClick}
 			className="card-play-button rounded-full bg-green-500 p-4"
+			aria-label={isPlayingPlaylist ? "Pausar" : "Reproducir"}
 		>
 			{isPlayingPlaylist ? (
 				<Pause className={`fill-black ${iconClassName}`} />

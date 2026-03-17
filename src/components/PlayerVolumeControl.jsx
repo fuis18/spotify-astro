@@ -32,6 +32,7 @@ export const PlayerVolumeControl = () => {
 				max={100}
 				min={0}
 				value={[volume * 100]}
+				thumbLabel="Volumen"
 				className="w-[95px]"
 				onValueChange={(value) => {
 					const [newVolume] = value;

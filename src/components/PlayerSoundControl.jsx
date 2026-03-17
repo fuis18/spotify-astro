@@ -40,6 +40,7 @@ export const PlayerSoundControl = ({ audio }) => {
 				max={audio?.current?.duration ?? 0}
 				min={0}
 				className="w-[400px]"
+				thumbLabel="Tiempo de reproducción"
 				onValueChange={(value) => {
 					audio.current.currentTime = value;
 				}}
