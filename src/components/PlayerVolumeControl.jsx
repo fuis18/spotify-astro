@@ -24,6 +24,7 @@ export const PlayerVolumeControl = () => {
 			<button
 				className="opacity-70 hover:opacity-100 transition px-1"
 				onClick={handleClickVolumen}
+				aria-label="Volumen"
 			>
 				<PlayerVolumeIconComponent loud={volume} />
 			</button>
